@@ -80,7 +80,7 @@ const Navigation = () => {
                 </motion.button>
               ))}
               <Button
-                onClick={() => window.open('/Aayushman, Professional Resume.pdf', '_blank')}
+                onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume.pdf`, '_blank')}
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300"
               >
                 Resume
@@ -123,7 +123,7 @@ const Navigation = () => {
               ))}
               <Button
                 onClick={() => {
-                  window.open('/Aayushman, Professional Resume.pdf', '_blank');
+                  window.open(`${process.env.PUBLIC_URL}/Resume.pdf`, '_blank');
                   setIsMobileMenuOpen(false);
                 }}
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-3 text-lg rounded-lg shadow-lg"

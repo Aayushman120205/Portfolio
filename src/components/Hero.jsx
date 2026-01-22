@@ -150,7 +150,7 @@ const Hero = () => {
             View Projects
           </Button>
           <Button
-            onClick={() => window.open('/Aayushman, Professional Resume.pdf', '_blank')}
+            onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume.pdf`, '_blank')}
             variant="outline"
             className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-6 text-lg rounded-lg transition-all duration-300 hover:scale-105"
           >
