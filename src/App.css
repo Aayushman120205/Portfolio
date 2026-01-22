@@ -1,0 +1,156 @@
+/* Global 3D Portfolio Styles */
+
+.App {
+  background: #0a0a0f;
+  min-height: 100vh;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Glass Morphism Effect */
+.glass-card {
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(18, 18, 26, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Transform Effects */
+.skill-card,
+.project-card,
+.stat-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) rotateX(2deg);
+}
+
+/* Hero Name Animation */
+.hero-name {
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 
+    0 0 20px rgba(168, 85, 247, 0.5),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.2);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #9333ea 0%, #0891b2 100%);
+}
+
+/* Selection */
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: #ffffff;
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 
+    0 0 10px rgba(168, 85, 247, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.2),
+    0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+/* Perspective Container */
+.perspective-container {
+  perspective: 1000px;
+}
+
+/* Loading Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Card Depth Effect */
+.card-depth {
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 8px 12px rgba(168, 85, 247, 0.1),
+    0 16px 24px rgba(59, 130, 246, 0.05);
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem !important;
+  }
+}
+
+/* Focus Visible */
+*:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Prevent Text Selection on Interactive Elements */
+button, a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
